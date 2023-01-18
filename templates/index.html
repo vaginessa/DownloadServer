@@ -12,7 +12,7 @@
     <h1>Available files</h1>
     {{ range .Files }}
     <div>
-      <p>{{ .Name }}</p>
+      <a href="./files/{{ .Name }}" download>{{ .Name }}</a>
       <p>{{ .Size }}</p>
       <p>{{ .ModTime }}</p>
     </div>

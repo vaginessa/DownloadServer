@@ -3,6 +3,7 @@ package handlers
 import (
 	"io/ioutil"
 	"log"
+	"time"
 
 	"github.com/dls/entities"
 	"github.com/gofiber/fiber/v2"
@@ -23,7 +24,7 @@ func FilesHandler(c *fiber.Ctx) error {
 		files = append(files, entities.File{
 			Name: file.Name(),
 			Size: utils.ByteSize(uint64(file.Size())),
-			ModTime: file.ModTime().String(),
+			ModTime: file.ModTime().Format(time.RFC822),
 		})
 	}
 

@@ -3,8 +3,9 @@
 }
 
 :root {
-  --text: #f1f1f1;
-  --background: #1f1f1f;
+  --text: #cdd6f4;
+  --background: #1e1e2e;
+  --accent: #fab387;
 }
 
 html {
@@ -28,4 +29,13 @@ div {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+a:hover {
+  text-decoration: underline;
 }

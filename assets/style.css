@@ -5,6 +5,7 @@
 :root {
   --text: #cdd6f4;
   --background: #1e1e2e;
+  --surface: #181825;
   --accent: #fab387;
 }
 
@@ -25,10 +26,19 @@ h1 {
   text-align: center;
 }
 
-div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: var(--surface);
 }
 
 a {

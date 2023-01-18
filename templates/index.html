@@ -10,12 +10,19 @@
   </head>
   <body>
     <h1>Available files</h1>
-    {{ range .Files }}
-    <div>
-      <a href="./files/{{ .Name }}" download>{{ .Name }}</a>
-      <p>{{ .Size }}</p>
-      <p>{{ .ModTime }}</p>
-    </div>
-    {{ end }}
+    <table>
+      <tr id="categories">
+        <th>Name</th>
+        <th>Size</th>
+        <th>ModTime</th>
+      </tr>
+      {{ range .Files }}
+      <tr>
+        <td><a href="./files/{{ .Name }}" download>{{ .Name }}</a></td>
+        <td>{{ .Size }}</td>
+        <td>{{ .ModTime }}</td>
+      </tr>
+      {{ end }}
+    </table>
   </body>
 </html>

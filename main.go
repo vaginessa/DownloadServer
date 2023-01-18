@@ -17,8 +17,10 @@ func main() {
 		Views: engine,
 	})
 
-	app.Get("/", handlers.FilesHandler)
+	app.Static("/assets", "./assets")
 	app.Static("/files", "./files")
+
+	app.Get("/", handlers.FilesHandler)
 
 	addr := flag.String("address", ":3000", "address to host on")
 	log.Fatal(app.Listen(*addr))
